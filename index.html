@@ -20,8 +20,8 @@
   <div class="wrap nav-inner">
     <div class="brand">Nick Shubin</div>
     <div class="langs">
-      <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
     </div>
   </div>
 </nav>
@@ -85,6 +85,28 @@
   </div>
 </section>
 
+<section class="section wrap photo-gallery-section">
+  <h2 class="section-title en">My Classroom & Style</h2>
+  <h2 class="section-title ru" hidden>Мой класс и стиль</h2>
+
+  <div class="gallery-grid grid-3">
+    
+    <div class="card photo-card">
+      <img src="images/teaching-setup.jpg" alt="Nick Shubin teaching setup" class="gallery-img">
+    </div>
+    
+    <div class="card photo-card">
+      <img src="images/whiteboard-notes.jpg" alt="English grammar notes" class="gallery-img">
+    </div>
+    
+    <div class="card photo-card">
+      <img src="images/skype-lesson.jpg" alt="Happy student on video call" class="gallery-img">
+    </div>
+
+  </div>
+  <p class="en photo-caption">A relaxed environment ensures the best learning experience.</p>
+  <p class="ru photo-caption" hidden>Расслабленная атмосфера гарантирует лучший опыт обучения.</p>
+</section>
 <section class="section wrap">
   <h2 class="section-title en">Pricing</h2>
   <h2 class="section-title ru" hidden>Стоимость</h2>
