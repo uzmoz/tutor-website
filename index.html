@@ -99,8 +99,10 @@
   </div>
   
   <div class="text-center" style="margin-top: 20px;">
-    <button id="toggle-diploma-btn-en" class="btn secondary en">View All Diplomas</button>
-    <button id="toggle-diploma-btn-ru" class="btn secondary ru" hidden>Показать все дипломы</button>
+    <button id="toggle-diploma-btn" class="btn secondary">
+        <span class="en">View All Diplomas</span>
+        <span class="ru" hidden>Показать все дипломы</span>
+    </button>
   </div>
 </section>
 
@@ -136,8 +138,10 @@
   </div>
   
   <div class="text-center" style="margin-top: 20px;">
-    <button id="toggle-gallery-btn-en" class="btn primary en">View All Proof</button>
-    <button id="toggle-gallery-btn-ru" class="btn primary ru" hidden>Показать все доказательства</button>
+    <button id="toggle-gallery-btn" class="btn primary">
+        <span class="en">View All Proof</span>
+        <span class="ru" hidden>Показать все доказательства</span>
+    </button>
   </div>
 </section>
 
@@ -219,7 +223,12 @@
   <h2 class="en">Contact</h2>
   <h2 class="ru" hidden>Контакты</h2>
   <p>Email: <a href="mailto:nickolaishubin@gmail.com">nickolaishubin@gmail.com</a></p>
-  <p>Telegram: <a href="https://t.me/uzmoz">t.me/uzmoz</a></p>
+  
+  <div class="contact-links">
+      <a href="https://t.me/uzmoz" class="btn telegram-btn" target="_blank">
+          <i class="fab fa-telegram-plane"></i> <span class="en">Message on Telegram</span><span class="ru" hidden>Написать в Telegram</span>
+      </a>
+  </div>
 </section>
 
 <script src="script.js"></script>
