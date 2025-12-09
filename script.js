@@ -1,29 +1,31 @@
 // --- CAROUSEL EXPANSION LOGIC ---
 // Reusable function to set up the expandable carousel logic
-function setupGalleryToggle(containerId, enButtonId, ruButtonId, enExpandText, enCollapseText, ruExpandText, ruCollapseText) {
+// Now uses a single button ID and finds the language spans inside it.
+function setupGalleryToggle(containerId, buttonId, enExpandText, enCollapseText, ruExpandText, ruCollapseText) {
     const container = document.getElementById(containerId);
-    const btnEn = document.getElementById(enButtonId);
-    const btnRu = document.getElementById(ruButtonId);
+    const btn = document.getElementById(buttonId);
 
-    // If any element is missing, exit the function
-    if (!container || !btnEn || !btnRu) return;
+    if (!container || !btn) return;
+    
+    // Find the language spans inside the single button
+    const spanEn = btn.querySelector('.en');
+    const spanRu = btn.querySelector('.ru');
 
     function toggle() {
         container.classList.toggle('expanded');
         const isExpanded = container.classList.contains('expanded');
-        
-        // Update both buttons for consistency regardless of current language view
+
+        // Update the text content of BOTH spans (the visible one will update the UI)
         if (isExpanded) {
-            btnEn.textContent = enCollapseText;
-            btnRu.textContent = ruCollapseText;
+            spanEn.textContent = enCollapseText;
+            spanRu.textContent = ruCollapseText;
         } else {
-            btnEn.textContent = enExpandText;
-            btnRu.textContent = ruExpandText;
+            spanEn.textContent = enExpandText;
+            spanRu.textContent = ruExpandText;
         }
     }
 
-    btnEn.addEventListener('click', toggle);
-    btnRu.addEventListener('click', toggle);
+    btn.addEventListener('click', toggle);
 }
 
 // --- LANGUAGE TOGGLE LOGIC ---
@@ -53,17 +55,19 @@ document.addEventListener('DOMContentLoaded', () => {
     setLang(savedLang);
 
     // 2. Setup Student Achievement Gallery
+    // Now passes a single button ID
     setupGalleryToggle(
         'achievement-gallery',
-        'toggle-gallery-btn-en', 'toggle-gallery-btn-ru',
+        'toggle-gallery-btn',
         'View All Proof', 'Hide Photos', 
         'Показать все доказательства', 'Свернуть фото'
     );
 
     // 3. Setup Diploma Gallery
+    // Now passes a single button ID
     setupGalleryToggle(
         'diploma-gallery',
-        'toggle-diploma-btn-en', 'toggle-diploma-btn-ru',
+        'toggle-diploma-btn',
         'View All Diplomas', 'Hide Diplomas',
         'Показать все дипломы', 'Скрыть дипломы'
     );
