@@ -111,23 +111,37 @@
 <section class="section wrap achievement-section" style="background: #fcfcfc;">
   <h2 class="section-title en">Student Success Stories</h2>
   <h2 class="section-title ru" hidden>Достижения учеников</h2>
+
+  <p class="lead en">See real scores, testimonials, and progress reports from happy students below.</p>
+  <p class="lead ru" hidden>Посмотрите реальные баллы, отзывы и отчеты о прогрессе от довольных студентов ниже.</p>
   
-  <div class="grid-2">
-    <div class="card achievement-card">
-      <div class="icon-box-small"><i class="fas fa-graduation-cap"></i></div>
-      <h3 class="en">Boosted Exam Score</h3>
-      <h3 class="ru" hidden>Повышение баллов на экзамене</h3>
-      <p class="en">"I improved my IELTS speaking score from 5.5 to 7.0 in just 3 months. Nick focuses on technique!" - Maria K.</p>
-      <p class="ru" hidden>"Я поднял свой балл IELTS Speaking с 5.5 до 7.0 всего за 3 месяца. Ник сосредоточен на технике!" - Мария К.</p>
-    </div>
-    
-    <div class="card achievement-card">
-      <div class="icon-box-small"><i class="fas fa-plane"></i></div>
-      <h3 class="en">Travel Confidence</h3>
-      <h3 class="ru" hidden>Уверенность в путешествиях</h3>
-      <p class="en">"After a few months of conversational practice, I traveled to the US and had no fear speaking to locals. Huge win!" - Ivan S.</p>
-      <p class="ru" hidden>"После нескольких месяцев разговорной практики я поехал в США и не боялся говорить с местными. Огромная победа!" - Иван С.</p>
-    </div>
+  <div class="achievement-carousel-container" id="achievement-gallery">
+    <div class="achievement-track">
+      
+      <div class="achievement-slide card">
+        <img src="images/achievement-ielts.jpg" alt="IELTS Score Screenshot" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/f0fff4/34c759?text=IELTS+Score'">
+        <p class="achievement-caption en">IELTS 7.0 (Screenshot)</p>
+        <p class="achievement-caption ru" hidden>IELTS 7.0 (Скриншот)</p>
+      </div>
+      
+      <div class="achievement-slide card">
+        <img src="images/achievement-message.jpg" alt="WhatsApp Testimonial" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/f0fff4/34c759?text=Student+Testimonial'">
+        <p class="achievement-caption en">Conversation Practice Success</p>
+        <p class="achievement-caption ru" hidden>Успех в разговорной практике</p>
+      </div>
+      
+      <div class="achievement-slide card">
+        <img src="images/achievement-job.jpg" alt="Job Interview Prep" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/f0fff4/34c759?text=Job+Prep+Feedback'">
+        <p class="achievement-caption en">Successful Job Interview Feedback</p>
+        <p class="achievement-caption ru" hidden>Отзыв об успешном собеседовании</p>
+      </div>
+      
+      </div>
+  </div>
+  
+  <div class="text-center" style="margin-top: 20px;">
+    <button id="toggle-gallery-btn" class="btn primary en">View All Proof</button>
+    <button id="toggle-gallery-btn-ru" class="btn primary ru" hidden>Показать все доказательства</button>
   </div>
 </section>
 <section class="section wrap">
@@ -146,24 +160,4 @@
       <li class="ru" hidden><i class="fas fa-check"></i> Индивидуальный подход</li>
       <li class="en"><i class="fas fa-check"></i> Materials included</li>
       <li class="ru" hidden><i class="fas fa-check"></i> Материалы включены</li>
-      <li class="en"><i class="fas fa-check"></i> Flexible schedule</li>
-      <li class="ru" hidden><i class="fas fa-check"></i> Гибкое расписание</li>
-    </ul>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="wrap">
-    <h2 class="en">Ready to start?</h2>
-    <h2 class="ru" hidden>Готовы начать?</h2>
-    <div class="contact-links">
-      <a href="https://t.me/uzmoz" class="btn secondary"><i class="fab fa-telegram"></i> Telegram</a>
-      <a href="mailto:nickolaishubin@gmail.com" class="btn secondary"><i class="fas fa-envelope"></i> Email</a>
-    </div>
-    <div class="copyright">© 2024 Nick Shubin</div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+      <li class="en">
