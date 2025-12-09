@@ -27,16 +27,16 @@ function setupGalleryToggle(containerId, enButtonId, ruButtonId, enExpandText, e
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-// Function from your script.js
-function setLang(lang) {
-    // Save selection to memory...
-    // Toggle Text Visibility (works for all elements with .en, .ru, etc.)
-    document.querySelectorAll('.en, .ru').forEach(e => {
-        e.hidden = !e.classList.contains(lang); // <--- This line now handles the span text!
-    });
-    // ... rest of the code
-}
+    // === LANGUAGE TOGGLE LOGIC (Robust, with Memory) ===
+    const savedLang = localStorage.getItem('site_lang') || 'en';
+    setLang(savedLang);
+
+    document.querySelectorAll('.lang-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const lang = button.getAttribute('data-lang');
+            setLang(lang);
+        });
+    });
 
     // === GALLERY EXPANSION SETUP ===
     
