@@ -1,3 +1,31 @@
+// Reusable function to set up the expandable carousel logic
+function setupGalleryToggle(containerId, enButtonId, ruButtonId, enExpandText, enCollapseText, ruExpandText, ruCollapseText) {
+    const container = document.getElementById(containerId);
+    const btnEn = document.getElementById(enButtonId);
+    const btnRu = document.getElementById(ruButtonId);
+
+    // If any element is missing, exit the function
+    if (!container || !btnEn || !btnRu) return;
+
+    function toggle() {
+        container.classList.toggle('expanded');
+        const isExpanded = container.classList.contains('expanded');
+        
+        // Update both buttons for consistency regardless of current language view
+        if (isExpanded) {
+            btnEn.textContent = enCollapseText;
+            btnRu.textContent = ruCollapseText;
+        } else {
+            btnEn.textContent = enExpandText;
+            btnRu.textContent = ruExpandText;
+        }
+    }
+
+    btnEn.addEventListener('click', toggle);
+    btnRu.addEventListener('click', toggle);
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // === LANGUAGE TOGGLE LOGIC (Robust, with Memory) ===
     const savedLang = localStorage.getItem('site_lang') || 'en';
@@ -10,41 +38,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // === GALLERY EXPANSION LOGIC ===
-    const toggleBtnEn = document.getElementById('toggle-gallery-btn');
-    const toggleBtnRu = document.getElementById('toggle-gallery-btn-ru');
-    const galleryContainer = document.getElementById('achievement-gallery');
+    // === GALLERY EXPANSION SETUP ===
     
-    // Function to handle the expansion toggle
-    function toggleGallery(btn) {
-        galleryContainer.classList.toggle('expanded');
-        
-        const isExpanded = galleryContainer.classList.contains('expanded');
-        
-        // Update the button text
-        if (isExpanded) {
-            if (btn === toggleBtnEn) {
-                btn.textContent = 'Hide Photos';
-            } else if (btn === toggleBtnRu) {
-                btn.textContent = 'Свернуть фото';
-            }
-        } else {
-            if (btn === toggleBtnEn) {
-                btn.textContent = 'View All Proof';
-            } else if (btn === toggleBtnRu) {
-                btn.textContent = 'Показать все доказательства';
-            }
-        }
-    }
+    // Setup Student Achievement Gallery
+    setupGalleryToggle(
+        'achievement-gallery',
+        'toggle-gallery-btn', 'toggle-gallery-btn-ru',
+        'View All Proof', 'Hide Photos', 
+        'Показать все доказательства', 'Свернуть фото'
+    );
 
-    // Attach listeners to both language buttons
-    if (toggleBtnEn) {
-        toggleBtnEn.addEventListener('click', () => toggleGallery(toggleBtnEn));
-    }
-    if (toggleBtnRu) {
-        toggleBtnRu.addEventListener('click', () => toggleGallery(toggleBtnRu));
-    }
+    // Setup Diploma Gallery
+    setupGalleryToggle(
+        'diploma-gallery',
+        'toggle-diploma-btn', 'toggle-diploma-btn-ru',
+        'View All Diplomas', 'Hide Diplomas',
+        'Показать все дипломы', 'Скрыть дипломы'
+    );
 });
+
 
 function setLang(lang) {
     // Save selection to memory
@@ -63,5 +75,4 @@ function setLang(lang) {
             b.classList.remove('active');
         }
     });
-}
 }
