@@ -3,26 +3,62 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Nick Shubin — Professional English Tutor for teens and adults.">
 <title>Nick Shubin — English Tutor</title>
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <header class="nav">
   <div class="wrap">
     <div class="brand">Nick Shubin</div>
     <div class="langs">
-      <button class="active" onclick="setLang('en')">EN</button>
-      <button onclick="setLang('ru')">RU</button>
+      <button class="active" data-lang="en" onclick="setLang('en')">EN</button>
+      <button data-lang="ru" onclick="setLang('ru')">RU</button>
     </div>
   </div>
 </header>
 
 <section class="hero wrap">
-  <h1 class="en">Making English Easy</h1>
-  <h1 class="ru" hidden>Делаю английский простым</h1>
-  <p class="lead en">Online English lessons for teens & adults — friendly, modern and practical.</p>
-  <p class="lead ru" hidden>Онлайн-уроки английского для подростков и взрослых — современно и комфортно.</p>
+  <div class="hero-content">
+    <div class="hero-image">
+      <img src="photo.jpg" alt="Nick Shubin Profile Photo" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Nick+Shubin&size=400&background=0b3a66&color=fff'">
+    </div>
+
+    <h1 class="en">Making English Easy</h1>
+    <h1 class="ru" hidden>Делаю английский простым</h1>
+    <p class="lead en">Online English lessons for teens & adults — friendly, modern and practical.</p>
+    <p class="lead ru" hidden>Онлайн-уроки английского для подростков и взрослых — современно и комфортно.</p>
+  </div>
 </section>
+
+<section class="section wrap">
+  <div class="grid-3">
+    <div class="card feature-card">
+      <div class="icon-box"><i class="fas fa-comments"></i></div>
+      <h3 class="en">Speaking Practice</h3>
+      <h3 class="ru" hidden>Разговорная практика</h3>
+      <p class="en">Overcome language barriers with interesting conversations tailored to your level.</p>
+      <p class="ru" hidden>Преодолейте языковой барьер с помощью интересных бесед, адаптированных под ваш уровень.</p>
+    </div>
+    <div class="card feature-card">
+      <div class="icon-box"><i class="fas fa-book-open"></i></div>
+      <h3 class="en">Grammar Made Easy</h3>
+      <h3 class="ru" hidden>Простая грамматика</h3>
+      <p class="en">Complex rules explained simply. No boring drilling, just practical usage.</p>
+      <p class="ru" hidden>Сложные правила простым языком. Никакой скучной зубрежки, только практика.</p>
+    </div>
+    <div class="card feature-card">
+      <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+      <h3 class="en">Business & Career</h3>
+      <h3 class="ru" hidden>Бизнес и карьера</h3>
+      <p class="en">Prepare for interviews, meetings, and professional correspondence.</p>
+      <p class="ru" hidden>Подготовка к интервью, встречам и деловой переписке.</p>
+    </div>
+  </div>
+</section>
+
 
 <section class="section wrap card">
   <h2 class="en">About Me</h2>
@@ -30,6 +66,81 @@
   <p class="en">Hi, I’m <strong>Nick Shubin</strong>, an English tutor helping students improve speaking, grammar and pronunciation.</p>
   <p class="ru" hidden>Привет! Я <strong>Nick Shubin</strong> — преподаватель английского, помогаю улучшать разговорный английский, грамматику и произношение.</p>
 </section>
+
+<section class="section wrap education-section">
+  <h2 class="en">My Education & Credentials</h2>
+  <h2 class="ru" hidden>Мое образование и квалификация</h2>
+  
+  <p class="lead en">Certified and experienced to provide the highest quality instruction. View my diplomas below.</p>
+  <p class="lead ru" hidden>Сертифицирован и имею опыт для обеспечения высочайшего качества обучения. Посмотрите мои дипломы ниже.</p>
+  
+  <div class="carousel-container" id="diploma-gallery">
+    <div class="carousel-track">
+      
+      <div class="carousel-slide card">
+        <img src="images/diploma-tefl.jpg" alt="TEFL Certification" class="carousel-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/e8f0fe/0066cc?text=TEFL+Certificate'">
+        <p class="carousel-caption en">TEFL/TESOL Certified Teacher</p>
+        <p class="carousel-caption ru" hidden>Сертификат TEFL/TESOL</p>
+      </div>
+      
+      <div class="carousel-slide card">
+        <img src="images/diploma-university.jpg" alt="University Diploma" class="carousel-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/e8f0fe/0066cc?text=University+Degree'">
+        <p class="carousel-caption en">BA in Linguistics / English</p>
+        <p class="carousel-caption ru" hidden>Бакалавр лингвистики</p>
+      </div>
+      
+      <div class="carousel-slide card">
+        <img src="images/diploma-ielts.jpg" alt="IELTS Certification" class="carousel-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/e8f0fe/0066cc?text=IELTS+Band+8.0'">
+        <p class="carousel-caption en">IELTS Band 8.0 Score</p>
+        <p class="carousel-caption ru" hidden>IELTS 8.0</p>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="text-center" style="margin-top: 20px;">
+    <button id="toggle-diploma-btn-en" class="btn secondary en">View All Diplomas</button>
+    <button id="toggle-diploma-btn-ru" class="btn secondary ru" hidden>Показать все дипломы</button>
+  </div>
+</section>
+
+<section class="section wrap achievement-section">
+  <h2 class="en">Student Success Stories</h2>
+  <h2 class="ru" hidden>Достижения учеников</h2>
+
+  <p class="lead en">See real scores, testimonials, and progress reports from happy students below.</p>
+  <p class="lead ru" hidden>Посмотрите реальные баллы, отзывы и отчеты о прогрессе от довольных студентов ниже.</p>
+  
+  <div class="carousel-container" id="achievement-gallery">
+    <div class="carousel-track">
+      
+      <div class="carousel-slide card">
+        <img src="images/achievement-ielts.jpg" alt="IELTS Score Screenshot" class="carousel-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/f0fff4/34c759?text=IELTS+Score'">
+        <p class="carousel-caption en">IELTS 7.0 (Screenshot)</p>
+        <p class="carousel-caption ru" hidden>IELTS 7.0 (Скриншот)</p>
+      </div>
+      
+      <div class="carousel-slide card">
+        <img src="images/achievement-message.jpg" alt="WhatsApp Testimonial" class="carousel-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/f0fff4/34c759?text=Student+Testimonial'">
+        <p class="carousel-caption en">Conversation Practice Success</p>
+        <p class="carousel-caption ru" hidden>Успех в разговорной практике</p>
+      </div>
+      
+      <div class="carousel-slide card">
+        <img src="images/achievement-job.jpg" alt="Job Interview Prep" class="carousel-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/f0fff4/34c759?text=Job+Prep+Feedback'">
+        <p class="carousel-caption en">Successful Job Interview Feedback</p>
+        <p class="carousel-caption ru" hidden>Отзыв об успешном собеседовании</p>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="text-center" style="margin-top: 20px;">
+    <button id="toggle-gallery-btn-en" class="btn primary en">View All Proof</button>
+    <button id="toggle-gallery-btn-ru" class="btn primary ru" hidden>Показать все доказательства</button>
+  </div>
+</section>
+
 
 <section class="section wrap">
   <h2 class="en">Prices</h2>
@@ -68,6 +179,41 @@
   <p class="special-deals-note en">Special deals may be applied when purchasing blocks of lessons.</p>
   <p class="special-deals-note ru" hidden>При покупке пакета уроков могут применяться специальные скидки.</p>
 
+</section>
+<section class="section wrap contact-form-section">
+  <h2 class="en">Get Started Today</h2>
+  <h2 class="ru" hidden>Начните сегодня</h2>
+  <p class="lead en">Fill out the form below for a free consultation or to ask any questions.</p>
+  <p class="lead ru" hidden>Заполните форму ниже для бесплатной консультации или чтобы задать вопросы.</p>
+  
+  <div class="card form-card">
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" /> 
+      
+      <div class="form-group">
+        <label for="name" class="en">Your Name (Optional):</label>
+        <label for="name" class="ru" hidden>Ваше имя (необязательно):</label>
+        <input type="text" id="name" name="name" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="email" class="en">Your Email:</label>
+        <label for="email" class="ru" hidden>Ваш Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="en">Your Message/Questions:</label>
+        <label for="message" class="ru" hidden>Ваше сообщение/вопросы:</label>
+        <textarea id="message" name="message" class="form-control"></textarea>
+      </div>
+      
+      <div class="text-center">
+        <button type="submit" class="btn primary en">Send Message</button>
+        <button type="submit" class="btn primary ru" hidden>Отправить сообщение</button>
+      </div>
+    </form>
+  </div>
 </section>
 <section class="section wrap card">
   <h2 class="en">Contact</h2>
