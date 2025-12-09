@@ -1,4 +1,69 @@
-function setLang(lang){
-  document.querySelectorAll('.en').forEach(e => e.hidden = (lang !== 'en'));
-  document.querySelectorAll('.ru').forEach(e => e.hidden = (lang !== 'ru'));
-}
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nick Shubin — English Tutor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Nick Shubin</h1>
+  <p class="tagline">Making English Easy</p>
+  <nav>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2 class="en">English Tutor for Teens & Adults</h2>
+  <h2 class="ru" hidden>Преподаватель английского</h2>
+</section>
+
+<section class="about">
+  <h3 class="en">About Me</h3>
+  <h3 class="ru" hidden>Обо мне</h3>
+  <p class="en">
+    Hi, I’m <strong>Nick Shubin</strong>, an English tutor helping teens and adults improve speaking,
+    pronunciation, grammar, and confidence. I teach online via Zoom, Mira, and Notion.
+  </p>
+  <p class="ru" hidden>
+    Привет! Я <strong>Nick Shubin</strong> — преподаватель английского для подростков и взрослых.
+    Помогаю ученикам улучшать разговорный английский, произношение и грамматику.
+    Провожу занятия онлайн через Zoom, Mira и Notion.
+  </p>
+</section>
+
+<section class="prices">
+  <h3 class="en">Prices</h3>
+  <h3 class="ru" hidden>Цены</h3>
+  <ul>
+    <li class="en">Standard (60 min): 1500 RUB / 20 USD</li>
+    <li class="en">Intensive (90 min): 2200 RUB / 30 USD</li>
+    <li class="en">Trial (30 min): 500 RUB / 7 USD</li>
+
+    <li class="ru" hidden>Стандарт (60 мин): 1500 RUB / 20 USD</li>
+    <li class="ru" hidden>Интенсив (90 мин): 2200 RUB / 30 USD</li>
+    <li class="ru" hidden>Пробный (30 мин): 500 RUB / 7 USD</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h3 class="en">Contact Me</h3>
+  <h3 class="ru" hidden>Связаться со мной</h3>
+
+  <p class="en">Telegram: <a href="https://t.me/uzmoz">t.me/uzmoz</a></p>
+  <p class="ru" hidden>Телеграм: <a href="https://t.me/uzmoz">t.me/uzmoz</a></p>
+
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="text" name="name" placeholder="Your Name / Имя" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message / Сообщение" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
