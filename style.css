@@ -306,6 +306,25 @@ label {
 /* --- END CONTACT FORM STYLES --- */
 
 
+/* --- TELEGRAM BUTTON STYLES --- */
+.contact-links {
+  text-align: center;
+  margin-top: 20px;
+}
+.telegram-btn {
+  background: #0088cc; /* Telegram Brand Color */
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.telegram-btn:hover {
+  background: #0077b3;
+}
+/* --- END TELEGRAM BUTTON STYLES --- */
+
+
 /* Mobile Optimization */
 @media (max-width: 650px) {
   .hero { padding: 40px 20px; }
