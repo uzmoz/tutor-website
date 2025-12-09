@@ -1,329 +1,52 @@
-!<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nick Shubin — English tutor</title>
-  <meta name="description" content="Nick Shubin — making English easy. Online lessons for teens & adults. Zoom · Mira · Notion.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nick Shubin — English Tutor</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="light">
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">Nick Shubin</a>
-      <nav class="controls" aria-label="Language switch">
-        <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
-        <button id="lang-ru" class="lang-btn" data-lang="ru">RU</button>
-      </nav>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <div class="brand">Nick Shubin</div>
+    <div class="langs">
+      <button class="active" onclick="setLang('en')">EN</button>
+      <button onclick="setLang('ru')">RU</button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero container">
-      <div class="hero-left">
-        <p class="eyebrow lang en">English tutor · Zoom · Mira · Notion</p>
-        <p class="eyebrow lang ru" hidden>Преподаватель английского · Zoom · Mira · Notion</p>
+<section class="hero wrap">
+  <h1 class="en">Making English Easy</h1>
+  <h1 class="ru" hidden>Делаю английский простым</h1>
+  <p class="lead en">Online English lessons for teens & adults — friendly, modern and practical.</p>
+  <p class="lead ru" hidden>Онлайн-уроки английского для подростков и взрослых — современно и комфортно.</p>
+</section>
 
-        <h1 class="lang en">Making English easy</h1>
-        <h1 class="lang ru" hidden>Делаю английский простым</h1>
+<section class="section wrap card">
+  <h2 class="en">About Me</h2>
+  <h2 class="ru" hidden>Обо мне</h2>
+  <p class="en">Hi, I’m <strong>Nick Shubin</strong>, an English tutor helping students improve speaking, grammar and pronunciation.</p>
+  <p class="ru" hidden>Привет! Я <strong>Nick Shubin</strong> — преподаватель английского, помогаю улучшать разговорный английский, грамматику и произношение.</p>
+</section>
 
-        <p class="lead lang en">Personal online lessons for teens and adults — practical, friendly, and structured so you actually use English in life and work.</p>
-        <p class="lead lang ru" hidden>Персональные онлайн-уроки для подростков и взрослых — практично, дружелюбно и структурированно, чтобы вы могли использовать английский в жизни и работе.</p>
+<section class="section wrap card">
+  <h2 class="en">Prices</h2>
+  <h2 class="ru" hidden>Цены</h2>
+  <ul>
+    <li class="en">Standard 60 min — 1500 RUB / 20 USD</li>
+    <li class="ru" hidden>Стандарт 60 мин — 1500 RUB / 20 USD</li>
+  </ul>
+</section>
 
-        <div class="cta-row">
-          <a href="#contact" class="btn primary lang en">Book a consultation</a>
-          <a href="#contact" class="btn primary lang ru" hidden>Записаться на консультацию</a>
-          <a href="#about" class="btn ghost lang en">About me</a>
-          <a href="#about" class="btn ghost lang ru" hidden>Обо мне</a>
-        </div>
+<section class="section wrap card">
+  <h2 class="en">Contact</h2>
+  <h2 class="ru" hidden>Контакты</h2>
+  <p>Email: <a href="mailto:nickolaishubin@gmail.com">nickolaishubin@gmail.com</a></p>
+  <p>Telegram: <a href="https://t.me/uzmoz">t.me/uzmoz</a></p>
+</section>
 
-        <ul class="quick-list">
-          <li class="lang en">C2 (Proficiency) • Lomonosov MSU</li>
-          <li class="lang ru" hidden>Уровень C2 • МГУ им. М. В. Ломоносова</li>
-          <li class="lang en">28 positive reviews on Profi.ru</li>
-          <li class="lang ru" hidden>28 положительных отзывов на Profi.ru</li>
-        </ul>
-      </div>
-
-      <div class="hero-right placeholder-visual" aria-hidden="true">
-        <!-- no photo by user choice — subtle visual block -->
-        <div class="visual-card">
-          <div class="visual-circle"></div>
-          <div class="visual-lines">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT / CV -->
-    <section id="about" class="container card">
-      <div class="section-inner">
-        <h2 class="lang en">About — CV & achievements</h2>
-        <h2 class="lang ru" hidden>Обо мне — резюме и достижения</h2>
-
-        <div class="about-grid">
-          <div class="about-text">
-            <!-- EN BIO -->
-            <p class="lang en">
-              Hi, I’m <strong>Nick Shubin</strong>, an English tutor helping teens and adults gain real speaking confidence, improve pronunciation,
-              and master English for study, work, and everyday communication.
-            </p>
-            <p class="lang en">
-              I teach online via <strong>Zoom, Mira, and Notion</strong>, offering structured lessons with a modern, interactive approach.
-              I design personalised plans based on goals, level, and learning style.
-            </p>
-            <p class="lang en">
-              Education: <strong>Lomonosov MSU</strong> (Bachelor — UK specialization) and additional TESOL / pronunciation training.
-              I have experience in international projects and voice-over recordings and have worked with students from different countries.
-            </p>
-
-            <!-- RU BIO -->
-            <p class="lang ru" hidden>
-              Привет! Я <strong>Nick Shubin</strong> — преподаватель английского для подростков и взрослых. Помогаю говорить увереннее, улучшать произношение и использовать английский в учёбе и работе.
-            </p>
-            <p class="lang ru" hidden>
-              Провожу занятия онлайн через <strong>Zoom, Mira и Notion</strong>, использую современный и практичный подход. Составляю индивидуальные планы под цель и уровень.
-            </p>
-            <p class="lang ru" hidden>
-              Образование: <strong>МГУ им. М. В. Ломоносова</strong> (бакалавриат, специализация Великобритания). Проходил TESOL и курсы по методике произношения.
-            </p>
-
-            <h3 class="small-title lang en">Teaching experience</h3>
-            <h3 class="small-title lang ru" hidden>Опыт преподавания</h3>
-
-            <ul class="bullets">
-              <li class="lang en">Private English tutor (Profi.ru) — 2018–present.</li>
-              <li class="lang ru" hidden>Репетитор (Profi.ru) — 2018–настоящее время.</li>
-              <li class="lang en">Course curator (Umschool) — curriculum and materials development.</li>
-              <li class="lang ru" hidden>Куратор курсов (Umschool) — разработка материалов и программ.</li>
-              <li class="lang en">Voice-over projects for Artefacto Learning Platform (30+ hours recorded).</li>
-              <li class="lang ru" hidden>Дикторские проекты для Artefacto (30+ часов).</li>
-            </ul>
-          </div>
-
-          <div class="about-photo">
-            <!-- placeholder — replace with real portrait when ready -->
-            <div class="photo-placeholder" aria-hidden="true">Portrait</div>
-          </div>
-        </div>
-
-        <h3 class="small-title lang en">Selected achievements</h3>
-        <h3 class="small-title lang ru" hidden>Достижения</h3>
-
-        <ul class="achievements bullets">
-          <li class="lang en">Improved the English skills of 100+ students.</li>
-          <li class="lang ru" hidden>Улучшил английский у более 100 учеников.</li>
-          <li class="lang en">Helped students progress from A2 → B1 in 3–6 months.</li>
-          <li class="lang ru" hidden>Помог переходить с A2 на B1 за 3–6 месяцев.</li>
-          <li class="lang en">Prepared students for interviews at international companies.</li>
-          <li class="lang ru" hidden>Готовил к собеседованиям в международные компании.</li>
-          <li class="lang en">Recorded 30+ hours of educational voice-over content.</li>
-          <li class="lang ru" hidden>Записал 30+ часов образовательных материалов.</li>
-        </ul>
-
-        <h3 class="small-title lang en">Education</h3>
-        <h3 class="small-title lang ru" hidden>Образование</h3>
-
-        <ul class="bullets">
-          <li class="lang en"><strong>Lomonosov MSU</strong> — Bachelor of Area Studies (UK specialization). Minor: Teaching English. 2019–2023.</li>
-          <li class="lang ru" hidden><strong>МГУ им. М. В. Ломоносова</strong> — бакалавриат, специализация: Великобритания. Майнор: преподавание английского. 2019–2023.</li>
-          <li class="lang en">TESOL — Arizona State University (2019–2020).</li>
-          <li class="lang ru" hidden>TESOL — Arizona State University (2019–2020).</li>
-          <li class="lang en">British Council — Pronunciation methodology (2022).</li>
-          <li class="lang ru" hidden>British Council — методика произношения (2022).</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- SERVICES & PRICES -->
-    <section id="services" class="container">
-      <h2 class="lang en">Services & Prices</h2>
-      <h2 class="lang ru" hidden>Услуги и цены</h2>
-
-      <div class="pricing-grid">
-        <div class="price-card card">
-          <h3 class="lang en">Standard — 60 min</h3>
-          <h3 class="lang ru" hidden>Стандарт — 60 мин</h3>
-          <p class="price">
-            <span class="lang en">₽ <span id="price-rub-std">1500</span></span>
-            <span class="lang ru" hidden>₽ <span id="price-rub-std-ru">1500</span></span><br/>
-            <span class="lang en">$ <span id="price-usd-std">20</span></span>
-            <span class="lang ru" hidden>$ <span id="price-usd-std-ru">20</span></span>
-          </p>
-          <p class="small lang en">Online — Zoom / Mira / Notion</p>
-          <p class="small lang ru" hidden>Онлайн — Zoom / Mira / Notion</p>
-        </div>
-
-        <div class="price-card card">
-          <h3 class="lang en">Intensive — 90 min</h3>
-          <h3 class="lang ru" hidden>Интенсив — 90 мин</h3>
-          <p class="price">
-            <span class="lang en">₽ <span id="price-rub-int">2200</span></span><br/>
-            <span class="lang en">$ <span id="price-usd-int">30</span></span>
-          </p>
-          <p class="small lang en">Blocks & custom packages available</p>
-          <p class="small lang ru" hidden>Пакеты и блоки доступны</p>
-        </div>
-
-        <div class="price-card card">
-          <h3 class="lang en">Trial — 30 min</h3>
-          <h3 class="lang ru" hidden>Пробный — 30 мин</h3>
-          <p class="price">
-            <span class="lang en">₽ <span id="price-rub-trial">500</span></span> · <span class="lang en">$ <span id="price-usd-trial">7</span></span>
-          </p>
-          <p class="small lang en">One-time consultation</p>
-          <p class="small lang ru" hidden>Одноразовая консультация</p>
-        </div>
-      </div>
-
-      <p class="note lang en">Prices shown above are placeholders. Edit them in <code>script.js</code> or directly in the HTML.</p>
-      <p class="note lang ru" hidden>Цены — заполнители. Измените в <code>script.js</code> или HTML.</p>
-    </section>
-
-    <!-- TEACHING STYLE -->
-    <section id="style" class="container card">
-      <h2 class="lang en">Teaching style</h2>
-      <h2 class="lang ru" hidden>Стиль обучения</h2>
-
-      <div class="two-col">
-        <div>
-          <h3 class="lang en">What I teach</h3>
-          <h3 class="lang ru" hidden>Чему я учу</h3>
-          <ul class="bullets">
-            <li class="lang en">Teens (grades 7–11), university students, adults.</li>
-            <li class="lang ru" hidden>Подростки (7–11 классы), студенты, взрослые.</li>
-            <li class="lang en">Speaking & conversation practice, pronunciation, grammar, exam prep.</li>
-            <li class="lang ru" hidden>Разговорный английский, произношение, грамматика, подготовка к экзаменам.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="lang en">How I teach</h3>
-          <h3 class="lang ru" hidden>Как я преподаю</h3>
-          <ul class="bullets">
-            <li class="lang en">Structured but flexible lessons, tailored to goals.</li>
-            <li class="lang ru" hidden>Структурированные, но гибкие занятия.</li>
-            <li class="lang en">Interactive resources: games, media, Notion-based homework.</li>
-            <li class="lang ru" hidden>Интерактивные ресурсы: игры, медиа, задания в Notion.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="container card">
-      <h2 class="lang en">Testimonials</h2>
-      <h2 class="lang ru" hidden>Отзывы</h2>
-      <div class="testi-grid">
-        <blockquote class="testi">
-          <p class="lang en">“Great lessons — I improved quickly.” — Student</p>
-          <p class="lang ru" hidden>«Отличные уроки — я быстро улучшился.» — Ученик</p>
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- CONTACT / FORM (Netlify ready) -->
-    <section id="contact" class="container card">
-      <h2 class="lang en">Contact / Book</h2>
-      <h2 class="lang ru" hidden>Контакт / Запись</h2>
-
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p class="lang en">Email: <a href="mailto:nickolaishubin@gmail.com">nickolaishubin@gmail.com</a></p>
-          <p class="lang ru" hidden>Почта: <a href="mailto:nickolaishubin@gmail.com">nickolaishubin@gmail.com</a></p>
-
-          <p class="lang en">Telegram: <a href="https://t.me/uzmoz" target="_blank" rel="noopener">t.me/uzmoz</a></p>
-          <p class="lang ru" hidden>Телеграм: <a href="https://t.me/uzmoz" target="_blank" rel="noopener">t.me/uzmoz</a></p>
-
-          <p class="lang en small muted">You can write directly or use the form — I’ll receive submissions when the site is deployed to Netlify.</p>
-          <p class="lang ru small muted" hidden>Можете писать напрямую или использовать форму — запросы придут, когда сайт будет размещён на Netlify.</p>
-        </div>
-
-        <form name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-          <input type="hidden" name="form-name" value="lead-form" />
-          <p class="hidden"><label>Don’t fill: <input name="bot-field"></label></p>
-
-          <label>
-            <span class="field-title lang en">Full name</span>
-            <span class="field-title lang ru" hidden>Имя и фамилия</span>
-            <input type="text" name="name" required>
-          </label>
-
-          <label>
-            <span class="field-title lang en">Email</span>
-            <span class="field-title lang ru" hidden>Email</span>
-            <input type="email" name="email" required>
-          </label>
-
-          <label>
-            <span class="field-title lang en">Phone (optional)</span>
-            <span class="field-title lang ru" hidden>Телефон (опционально)</span>
-            <input type="text" name="phone">
-          </label>
-
-          <label>
-            <span class="field-title lang en">Level / Who are you?</span>
-            <span class="field-title lang ru" hidden>Уровень / Кто вы?</span>
-            <select name="level">
-              <option value="adult">Adult</option>
-              <option value="teen">Teen</option>
-              <option value="business">Business</option>
-              <option value="exam">Exam prep</option>
-            </select>
-          </label>
-
-          <label>
-            <span class="field-title lang en">Preferred platform</span>
-            <span class="field-title lang ru" hidden>Платформа</span>
-            <input type="text" name="platform" placeholder="Zoom / Mira / Notion">
-          </label>
-
-          <label>
-            <span class="field-title lang en">Message</span>
-            <span class="field-title lang ru" hidden>Сообщение</span>
-            <textarea name="message" rows="4"></textarea>
-          </label>
-
-          <label>
-            <span class="field-title lang en">Your Telegram (or paste mine)</span>
-            <span class="field-title lang ru" hidden>Ваш Telegram (или вставьте мой)</span>
-            <input type="text" name="telegram" placeholder="t.me/...">
-          </label>
-
-          <label class="consent">
-            <input type="checkbox" name="consent" required>
-            <span class="lang en">I consent to be contacted about lessons</span>
-            <span class="lang ru" hidden>Я даю согласие на связь по вопросам уроков</span>
-          </label>
-
-          <div class="form-actions">
-            <button type="submit" class="btn primary lang en">Send request</button>
-            <button type="submit" class="btn primary lang ru" hidden>Отправить</button>
-          </div>
-        </form>
-      </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="left">
-          <p class="brand small">Nick Shubin — English tutor</p>
-          <p class="muted small lang en">Zoom · Mira · Notion</p>
-          <p class="muted small lang ru" hidden>Zoom · Mira · Notion</p>
-        </div>
-        <div class="right small">
-          <p class="lang en">Email: <a href="mailto:nickolaishubin@gmail.com">nickolaishubin@gmail.com</a></p>
-          <p class="lang ru" hidden>Почта: <a href="mailto:nickolaishubin@gmail.com">nickolaishubin@gmail.com</a></p>
-          <p class="lang en">Telegram: <a href="https://t.me/uzmoz">t.me/uzmoz</a></p>
-          <p class="lang ru" hidden>Телеграм: <a href="https://t.me/uzmoz">t.me/uzmoz</a></p>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
