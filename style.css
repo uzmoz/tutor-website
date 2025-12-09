@@ -64,7 +64,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .lead { font-size: 19px; color: var(--text-light); max-width: 480px; margin-bottom: 30px; }
-.text-center { text-align: center; } /* New utility class */
+.text-center { text-align: center; }
 
 /* Buttons */
 .btn {
@@ -103,31 +103,20 @@ body {
 .feature-card h3 { margin: 10px 0; font-size: 18px; }
 .feature-card p { font-size: 15px; color: var(--text-light); }
 
+/* Prices */
+.price-card { max-width: 500px; margin: auto; text-align: center; }
+.price { font-size: 32px; font-weight: 800; color: var(--text-main); margin-top: 10px; }
+.price .sub { font-size: 16px; font-weight: 400; color: var(--text-light); }
+.usd-price { color: var(--text-light); font-size: 14px; margin-bottom: 20px; }
+.benefits { list-style: none; padding: 0; text-align: left; margin-top: 20px; }
+.benefits li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 15px; }
+.benefits i { color: #34c759; margin-right: 10px; }
 
-/* Education/Diploma Styles */
-.diploma-card { padding: 10px; text-align: center; }
-.diploma-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px; 
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  border: 1px solid #e0e0e0;
-}
-.diploma-caption {
-  font-size: 14px;
-  color: var(--primary);
-  font-weight: 600;
-  margin-top: 15px;
-}
-
-
-/* === NEW ACHIEVEMENT CAROUSEL STYLES === */
+/* --- CAROUSEL STYLES (Shared by Diplomas & Achievements) --- */
 .achievement-carousel-container {
-    /* Initially hide the majority of the carousel */
-    max-height: 250px; 
+    max-height: 250px; /* Initial visible height */
     overflow: hidden;
-    transition: max-height 0.5s ease-out; /* Smooth expansion */
+    transition: max-height 0.5s ease-out;
     position: relative;
     /* Gradient fade at the bottom to hint at more content */
     mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
@@ -135,9 +124,9 @@ body {
 }
 
 .achievement-carousel-container.expanded {
-    max-height: 1000px; /* Large value to ensure it fully expands */
-    overflow-x: auto; /* Enable horizontal scroll when expanded */
-    mask-image: none; /* Remove the fade effect when expanded */
+    max-height: 1000px; /* Target height for expansion */
+    overflow-x: auto; /* Enables horizontal scroll */
+    mask-image: none;
     -webkit-mask-image: none;
 }
 
@@ -145,12 +134,12 @@ body {
     display: flex;
     gap: 20px;
     padding: 20px 0;
-    scroll-snap-type: x mandatory; /* Makes the scrolling snap to cards */
+    scroll-snap-type: x mandatory; 
     -webkit-overflow-scrolling: touch;
 }
 
 .achievement-slide {
-    flex: 0 0 300px; /* Fixes the width of each slide (card) */
+    flex: 0 0 300px; /* Fixes the width of each card/slide */
     scroll-snap-align: start;
     padding: 10px;
 }
@@ -161,6 +150,7 @@ body {
     display: block;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
 }
 
 .achievement-caption {
@@ -169,7 +159,46 @@ body {
     margin-top: 10px;
     text-align: center;
 }
-/* === END NEW ACHIEVEMENT CAROUSEL STYLES === */
+/* --- END CAROUSEL STYLES --- */
+
+
+/* --- FORM STYLES --- */
+.form-card {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-control {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #d2d2d7;
+  border-radius: 8px;
+  box-sizing: border-box; 
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s;
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary); 
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-main);
+}
+/* --- END FORM STYLES --- */
 
 
 /* Footer */
@@ -186,7 +215,6 @@ body {
   .hero h1 { font-size: 36px; }
   .cta-group { display: flex; flex-direction: column; gap: 10px; }
   
-  /* Make achievement slides smaller on mobile */
   .achievement-slide {
       flex: 0 0 80%;
   }
