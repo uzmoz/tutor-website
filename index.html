@@ -89,23 +89,36 @@
   <h2 class="section-title en">My Education & Credentials</h2>
   <h2 class="section-title ru" hidden>Мое образование и квалификация</h2>
   
-  <p class="en photo-caption" style="margin-bottom: 30px;">Certified and experienced to provide the highest quality instruction.</p>
-  <p class="ru photo-caption" hidden style="margin-bottom: 30px;">Сертифицирован и имею опыт для обеспечения высочайшего качества обучения.</p>
+  <p class="en lead">Certified and experienced to provide the highest quality instruction. View my diplomas below.</p>
+  <p class="ru lead" hidden>Сертифицирован и имею опыт для обеспечения высочайшего качества обучения. Посмотрите мои дипломы ниже.</p>
   
-  <div class="grid-2 diploma-grid">
-    
-    <div class="card diploma-card">
-      <img src="images/diploma-tefl.jpg" alt="TEFL Certification" class="diploma-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x450/e8f0fe/0066cc?text=TEFL+Certificate'">
-      <p class="diploma-caption en">TEFL/TESOL Certified Teacher</p>
-      <p class="diploma-caption ru" hidden>Сертификат TEFL/TESOL</p>
+  <div class="achievement-carousel-container" id="diploma-gallery">
+    <div class="achievement-track">
+      
+      <div class="achievement-slide card">
+        <img src="images/diploma-tefl.jpg" alt="TEFL Certification" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/e8f0fe/0066cc?text=TEFL+Certificate'">
+        <p class="achievement-caption en">TEFL/TESOL Certified Teacher</p>
+        <p class="achievement-caption ru" hidden>Сертификат TEFL/TESOL</p>
+      </div>
+      
+      <div class="achievement-slide card">
+        <img src="images/diploma-university.jpg" alt="University Diploma" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/e8f0fe/0066cc?text=University+Degree'">
+        <p class="achievement-caption en">BA in Linguistics / English</p>
+        <p class="achievement-caption ru" hidden>Бакалавр лингвистики</p>
+      </div>
+      
+      <div class="achievement-slide card">
+        <img src="images/diploma-ielts.jpg" alt="IELTS Certification" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/e8f0fe/0066cc?text=IELTS+Band+8.0'">
+        <p class="achievement-caption en">IELTS Band 8.0 Score</p>
+        <p class="achievement-caption ru" hidden>IELTS 8.0</p>
+      </div>
+      
     </div>
-    
-    <div class="card diploma-card">
-      <img src="images/diploma-university.jpg" alt="University Diploma" class="diploma-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x450/e8f0fe/0066cc?text=University+Degree'">
-      <p class="diploma-caption en">BA in Linguistics / English</p>
-      <p class="diploma-caption ru" hidden>Бакалавр лингвистики</p>
-    </div>
-    
+  </div>
+  
+  <div class="text-center" style="margin-top: 20px;">
+    <button id="toggle-diploma-btn" class="btn secondary en">View All Diplomas</button>
+    <button id="toggle-diploma-btn-ru" class="btn secondary ru" hidden>Показать все дипломы</button>
   </div>
 </section>
 <section class="section wrap achievement-section" style="background: #fcfcfc;">
@@ -135,8 +148,8 @@
         <p class="achievement-caption en">Successful Job Interview Feedback</p>
         <p class="achievement-caption ru" hidden>Отзыв об успешном собеседовании</p>
       </div>
-      
-      </div>
+
+    </div>
   </div>
   
   <div class="text-center" style="margin-top: 20px;">
@@ -144,9 +157,44 @@
     <button id="toggle-gallery-btn-ru" class="btn primary ru" hidden>Показать все доказательства</button>
   </div>
 </section>
+<section class="section wrap contact-form-section">
+  <h2 class="section-title en">Get Started Today</h2>
+  <h2 class="section-title ru" hidden>Начните сегодня</h2>
+  <p class="lead en">Fill out the form below for a free consultation or to ask any questions.</p>
+  <p class="lead ru" hidden>Заполните форму ниже для бесплатной консультации или чтобы задать вопросы.</p>
+  
+  <div class="card form-card">
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact" /> 
+      
+      <div class="form-group">
+        <label for="name" class="en">Your Name (Optional):</label>
+        <label for="name" class="ru" hidden>Ваше имя (необязательно):</label>
+        <input type="text" id="name" name="name" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="email" class="en">Your Email:</label>
+        <label for="email" class="ru" hidden>Ваш Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="en">Your Message/Questions:</label>
+        <label for="message" class="ru" hidden>Ваше сообщение/вопросы:</label>
+        <textarea id="message" name="message" class="form-control"></textarea>
+      </div>
+      
+      <div class="text-center">
+        <button type="submit" class="btn primary en">Send Message</button>
+        <button type="submit" class="btn primary ru" hidden>Отправить сообщение</button>
+      </div>
+    </form>
+  </div>
+</section>
 <section class="section wrap">
   <h2 class="section-title en">Pricing</h2>
-  <h2 class="section-title ru" hidden>Стоимость</h2>
+  <h2 class="ru" hidden>Стоимость</h2>
   <div class="card price-card">
     <div class="price-header">
       <h3 class="en">Standard Lesson</h3>
@@ -160,4 +208,24 @@
       <li class="ru" hidden><i class="fas fa-check"></i> Индивидуальный подход</li>
       <li class="en"><i class="fas fa-check"></i> Materials included</li>
       <li class="ru" hidden><i class="fas fa-check"></i> Материалы включены</li>
-      <li class="en">
+      <li class="en"><i class="fas fa-check"></i> Flexible schedule</li>
+      <li class="ru" hidden><i class="fas fa-check"></i> Гибкое расписание</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <h2 class="en">Ready to start?</h2>
+    <h2 class="ru" hidden>Готовы начать?</h2>
+    <div class="contact-links">
+      <a href="https://t.me/uzmoz" class="btn secondary"><i class="fab fa-telegram"></i> Telegram</a>
+      <a href="mailto:nickolaishubin@gmail.com" class="btn secondary"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+    <div class="copyright">© 2024 Nick Shubin</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
