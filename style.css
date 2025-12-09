@@ -1,0 +1,5 @@
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin:0; padding:0; background:#fff; color:#000; }
+header { padding:20px; text-align:center; border-bottom:1px solid #eee; }
+.hero { padding:40px; text-align:center; background:#001f3f; color:white; }
+section { padding:20px; max-width:700px; margin:auto; }
+button { margin:5px; padding:8px 16px; border:1px solid #000; background:white; }
