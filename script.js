@@ -16,6 +16,8 @@ function setupGalleryToggle(containerId, enButtonId, ruButtonId, enExpandText, e
         } else {
             btnEn.textContent = enExpandText;
             btnRu.textContent = ruExpandText;
+            // Scroll back to the top of the section when collapsing
+            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
 
@@ -24,6 +26,7 @@ function setupGalleryToggle(containerId, enButtonId, ruButtonId, enExpandText, e
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // === LANGUAGE TOGGLE LOGIC ===
     const savedLang = localStorage.getItem('site_lang') || 'en';
     setLang(savedLang);
 
@@ -34,17 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // === GALLERY EXPANSION SETUP ===
+    
+    // Student Results Gallery
     setupGalleryToggle(
         'achievement-gallery',
         'toggle-gallery-btn', 'toggle-gallery-btn-ru',
-        'View All Proof', 'Hide Photos', 
-        'Показать все доказательства', 'Свернуть фото'
+        'View Student Proof', 'Hide Results', 
+        'Результаты учеников', 'Свернуть'
     );
 
+    // Education/Diploma Gallery
     setupGalleryToggle(
         'diploma-gallery',
         'toggle-diploma-btn', 'toggle-diploma-btn-ru',
-        'View All Diplomas', 'Hide Diplomas',
+        'View All Credentials', 'Hide Credentials',
         'Показать все дипломы', 'Скрыть дипломы'
     );
 });
@@ -53,14 +60,18 @@ function setLang(lang) {
     localStorage.setItem('site_lang', lang);
 
     document.querySelectorAll('.en, .ru').forEach(e => {
-        e.hidden = !e.classList.contains(lang);
+        if (e.classList.contains(lang)) {
+            e.hidden = false;
+            // Handle display for non-block elements if needed, but 'hidden' attribute is SEO friendly
+        } else {
+            e.hidden = true;
+        }
     });
     
     document.querySelectorAll('.lang-btn').forEach(b => {
-        if (b.getAttribute('data-lang') === lang) {
-            b.classList.add('active');
-        } else {
-            b.classList.remove('active');
-        }
+        b.classList.toggle('active', b.getAttribute('data-lang') === lang);
     });
+
+    // Update HTML lang attribute for accessibility
+    document.documentElement.lang = lang;
 }
