@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nick Shubin — Professional English Tutor for teens and adults.">
-  <title>Nick Shubin — English Tutor</title>
-  
+  <meta name="description" content="Professional English tutor online. Speaking, fluency, IELTS, and exam preparation. Free trial lesson.">
+  <meta name="keywords" content="English tutor online, IELTS preparation, speaking English, English lessons">
+  <meta name="author" content="Nick Shubin">
+  <title>English Tutor Online | Speaking & IELTS | Nick Shubin</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,8 +20,8 @@
   <div class="wrap nav-inner">
     <div class="brand">Nick Shubin</div>
     <div class="langs">
-      <button class="lang-btn active" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn active" data-lang="en" aria-label="Switch language to English">EN</button>
+      <button class="lang-btn" data-lang="ru" aria-label="Переключить язык на русский">RU</button>
     </div>
   </div>
 </nav>
@@ -29,23 +29,37 @@
 <header class="hero">
   <div class="wrap hero-inner">
     <div class="hero-text">
-      <div class="badge en">New Students Welcome</div>
-      <div class="badge ru" hidden>Открыт набор учеников</div>
-      
-      <h1 class="en">Unlock Your Potential in <span class="gradient-text">English</span></h1>
-      <h1 class="ru" hidden>Раскройте свой потенциал в <span class="gradient-text">Английском</span></h1>
-      
-      <p class="lead en">Personalized online lessons for teens & adults. Speak confidently, master grammar, and sound natural.</p>
-      <p class="lead ru" hidden>Персональные онлайн-уроки для подростков и взрослых. Говорите уверенно, освойте грамматику и звучите естественно.</p>
-      
+      <span class="badge en">Free trial available</span>
+      <span class="badge ru" hidden>Бесплатный пробный урок</span>
+
+      <!-- SINGLE H1 -->
+      <h1 class="en">Confident <span class="gradient-text">English Speaking</span> Starts Here</h1>
+      <h2 class="ru" hidden>Уверенный <span class="gradient-text">английский</span> начинается здесь</h2>
+
+      <p class="lead en">
+        Personalized online English lessons for teens and adults.  
+        Speaking & fluency first — exams when you need them.
+      </p>
+      <p class="lead ru" hidden>
+        Персональные онлайн-уроки английского для подростков и взрослых.  
+        Упор на разговорную речь и уверенность.
+      </p>
+
       <div class="cta-group">
-        <a href="https://t.me/uzmoz" target="_blank" class="btn primary en"><i class="fab fa-telegram-plane"></i> Book Free Trial</a>
-        <a href="https://t.me/uzmoz" target="_blank" class="btn primary ru" hidden><i class="fab fa-telegram-plane"></i> Записаться на урок</a>
+        <a href="https://t.me/uzmoz" target="_blank" class="btn primary en">
+          <i class="fab fa-telegram-plane"></i> Book Free Trial
+        </a>
+        <a href="https://t.me/uzmoz" target="_blank" class="btn primary ru" hidden>
+          <i class="fab fa-telegram-plane"></i> Записаться на пробный урок
+        </a>
       </div>
-    </div>
-    
-    <div class="hero-image">
-      <img src="photo.jpg" alt="Nick Shubin" onerror="this.src='https://ui-avatars.com/api/?name=Nick+Shubin&size=400&background=0b3a66&color=fff'">
+
+      <p class="lead en" style="font-size:14px;margin-top:10px;">
+        Free 50–60 min trial · No commitment
+      </p>
+      <p class="lead ru" hidden style="font-size:14px;margin-top:10px;">
+        Бесплатный урок 50–60 минут · Без обязательств
+      </p>
     </div>
   </div>
 </header>
@@ -54,163 +68,106 @@
   <div class="grid-3">
     <div class="card feature-card">
       <div class="icon-box"><i class="fas fa-comments"></i></div>
-      <h3 class="en">Speaking Practice</h3>
-      <h3 class="ru" hidden>Разговорная практика</h3>
-      <p class="en">Overcome language barriers with interesting conversations tailored to your level.</p>
-      <p class="ru" hidden>Преодолейте языковой барьер с помощью интересных бесед, адаптированных под ваш уровень.</p>
+      <h3 class="en">Speaking & Fluency</h3>
+      <h3 class="ru" hidden>Разговорная речь</h3>
+      <p class="en">Build confidence, speak naturally, and stop translating in your head.</p>
+      <p class="ru" hidden>Уверенная речь без постоянного перевода в голове.</p>
     </div>
+
     <div class="card feature-card">
       <div class="icon-box"><i class="fas fa-book-open"></i></div>
-      <h3 class="en">Grammar Made Easy</h3>
-      <h3 class="ru" hidden>Простая грамматика</h3>
-      <p class="en">Complex rules explained simply. No boring drilling, just practical usage.</p>
-      <p class="ru" hidden>Сложные правила простым языком. Никакой скучной зубрежки, только практика.</p>
+      <h3 class="en">Clear Grammar</h3>
+      <h3 class="ru" hidden>Понятная грамматика</h3>
+      <p class="en">Grammar explained simply and used in real conversations.</p>
+      <p class="ru" hidden>Грамматика простым языком и сразу в речи.</p>
     </div>
+
     <div class="card feature-card">
       <div class="icon-box"><i class="fas fa-briefcase"></i></div>
-      <h3 class="en">Business & Career</h3>
-      <h3 class="ru" hidden>Бизнес и карьера</h3>
-      <p class="en">Prepare for interviews, meetings, and professional correspondence.</p>
-      <p class="ru" hidden>Подготовка к интервью, встречам и деловой переписке.</p>
+      <h3 class="en">Exams & Interviews</h3>
+      <h3 class="ru" hidden>Экзамены и собеседования</h3>
+      <p class="en">IELTS, ЕГЭ, ОГЭ, and interview preparation when needed.</p>
+      <p class="ru" hidden>Подготовка к IELTS, ЕГЭ, ОГЭ и собеседованиям.</p>
     </div>
   </div>
 </section>
 
 <section class="section wrap">
-  <div class="card glass-panel">
-    <h2 class="en">About Me</h2>
-    <h2 class="ru" hidden>Обо мне</h2>
-    <p class="en">Hi, I’m <strong>Nick Shubin</strong>. I believe learning English shouldn't be stressful. My teaching methodology focuses on creating a relaxed atmosphere where you aren't afraid to make mistakes—because that's how we learn. I use modern materials (videos, articles, real-life scenarios) rather than old textbooks.</p>
-    <p class="ru" hidden>Привет! Я <strong>Nick Shubin</strong>. Я верю, что изучение английского не должно быть стрессом. Моя методика основана на создании расслабленной атмосферы, где вы не боитесь делать ошибки — ведь именно так мы учимся. Я использую современные материалы (видео, статьи, живые ситуации), а не скучные учебники.</p>
-  </div>
-</section>
+  <div class="card">
+    <h2 class="en">Credentials & Experience</h2>
+    <h2 class="ru" hidden>Образование и опыт</h2>
 
-<section class="section wrap education-section">
-  <h2 class="section-title en">My Education & Credentials</h2>
-  <h2 class="section-title ru" hidden>Мое образование и квалификация</h2>
-  
-  <p class="en lead">Certified and experienced to provide the highest quality instruction. View my diplomas below.</p>
-  <p class="ru lead" hidden>Сертифицирован и имею опыт для обеспечения высочайшего качества обучения. Посмотрите мои дипломы ниже.</p>
-  
-  <div class="achievement-carousel-container" id="diploma-gallery">
-    <div class="achievement-track">
-      
-      <div class="achievement-slide card">
-        <img src="images/diploma-tefl.jpg" alt="TEFL Certification" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/e8f0fe/0066cc?text=TEFL+Certificate'">
-        <p class="achievement-caption en">TEFL/TESOL Certified Teacher</p>
-        <p class="achievement-caption ru" hidden>Сертификат TEFL/TESOL</p>
-      </div>
-      
-      <div class="achievement-slide card">
-        <img src="images/diploma-university.jpg" alt="University Diploma" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/e8f0fe/0066cc?text=University+Degree'">
-        <p class="achievement-caption en">BA in Linguistics / English</p>
-        <p class="achievement-caption ru" hidden>Бакалавр лингвистики</p>
-      </div>
-      
-      <div class="achievement-slide card">
-        <img src="images/diploma-ielts.jpg" alt="IELTS Certification" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/e8f0fe/0066cc?text=IELTS+Band+8.0'">
-        <p class="achievement-caption en">IELTS Band 8.0 Score</p>
-        <p class="achievement-caption ru" hidden>IELTS 8.0</p>
-      </div>
-      
-    </div>
-  </div>
-  
-  <div class="text-center" style="margin-top: 20px;">
-    <button id="toggle-diploma-btn" class="btn secondary en">View All Diplomas</button>
-    <button id="toggle-diploma-btn-ru" class="btn secondary ru" hidden>Показать все дипломы</button>
-  </div>
-</section>
-<section class="section wrap achievement-section" style="background: #fcfcfc;">
-  <h2 class="section-title en">Student Success Stories</h2>
-  <h2 class="section-title ru" hidden>Достижения учеников</h2>
-
-  <p class="lead en">See real scores, testimonials, and progress reports from happy students below.</p>
-  <p class="lead ru" hidden>Посмотрите реальные баллы, отзывы и отчеты о прогрессе от довольных студентов ниже.</p>
-  
-  <div class="achievement-carousel-container" id="achievement-gallery">
-    <div class="achievement-track">
-      
-      <div class="achievement-slide card">
-        <img src="images/achievement-ielts.jpg" alt="IELTS Score Screenshot" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/f0fff4/34c759?text=IELTS+Score'">
-        <p class="achievement-caption en">IELTS 7.0 (Screenshot)</p>
-        <p class="achievement-caption ru" hidden>IELTS 7.0 (Скриншот)</p>
-      </div>
-      
-      <div class="achievement-slide card">
-        <img src="images/achievement-message.jpg" alt="WhatsApp Testimonial" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/f0fff4/34c759?text=Student+Testimonial'">
-        <p class="achievement-caption en">Conversation Practice Success</p>
-        <p class="achievement-caption ru" hidden>Успех в разговорной практике</p>
-      </div>
-      
-      <div class="achievement-slide card">
-        <img src="images/achievement-job.jpg" alt="Job Interview Prep" class="achievement-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x550/f0fff4/34c759?text=Job+Prep+Feedback'">
-        <p class="achievement-caption en">Successful Job Interview Feedback</p>
-        <p class="achievement-caption ru" hidden>Отзыв об успешном собеседовании</p>
-      </div>
-
-    </div>
-  </div>
-  
-  <div class="text-center" style="margin-top: 20px;">
-    <button id="toggle-gallery-btn" class="btn primary en">View All Proof</button>
-    <button id="toggle-gallery-btn-ru" class="btn primary ru" hidden>Показать все доказательства</button>
-  </div>
-</section>
-<section class="section wrap contact-form-section">
-  <h2 class="section-title en">Get Started Today</h2>
-  <h2 class="section-title ru" hidden>Начните сегодня</h2>
-  <p class="lead en">Fill out the form below for a free consultation or to ask any questions.</p>
-  <p class="lead ru" hidden>Заполните форму ниже для бесплатной консультации или чтобы задать вопросы.</p>
-  
-  <div class="card form-card">
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" /> 
-      
-      <div class="form-group">
-        <label for="name" class="en">Your Name (Optional):</label>
-        <label for="name" class="ru" hidden>Ваше имя (необязательно):</label>
-        <input type="text" id="name" name="name" class="form-control">
-      </div>
-      
-      <div class="form-group">
-        <label for="email" class="en">Your Email:</label>
-        <label for="email" class="ru" hidden>Ваш Email:</label>
-        <input type="email" id="email" name="email" class="form-control" required>
-      </div>
-
-      <div class="form-group">
-        <label for="message" class="en">Your Message/Questions:</label>
-        <label for="message" class="ru" hidden>Ваше сообщение/вопросы:</label>
-        <textarea id="message" name="message" class="form-control"></textarea>
-      </div>
-      
-      <div class="text-center">
-        <button type="submit" class="btn primary en">Send Message</button>
-        <button type="submit" class="btn primary ru" hidden>Отправить сообщение</button>
-      </div>
-    </form>
-  </div>
-</section>
-<section class="section wrap">
-  <h2 class="section-title en">Pricing</h2>
-  <h2 class="ru" hidden>Стоимость</h2>
-  <div class="card price-card">
-    <div class="price-header">
-      <h3 class="en">Standard Lesson</h3>
-      <h3 class="ru" hidden>Стандартный урок</h3>
-      <div class="price">1500 RUB <span class="sub">/ 60 min</span></div>
-      <div class="usd-price">approx. $20 USD</div>
-    </div>
-    <hr>
     <ul class="benefits">
-      <li class="en"><i class="fas fa-check"></i> Individual approach</li>
-      <li class="ru" hidden><i class="fas fa-check"></i> Индивидуальный подход</li>
-      <li class="en"><i class="fas fa-check"></i> Materials included</li>
-      <li class="ru" hidden><i class="fas fa-check"></i> Материалы включены</li>
-      <li class="en"><i class="fas fa-check"></i> Flexible schedule</li>
-      <li class="ru" hidden><i class="fas fa-check"></i> Гибкое расписание</li>
+      <li class="en">BA in Area Studies (UK specialization) — Moscow State University</li>
+      <li class="ru" hidden>Бакалавр зарубежного регионоведения (Великобритания) — МГУ</li>
+
+      <li class="en">C2 Certificate — Kaplan International School (UK)</li>
+      <li class="ru" hidden>Сертификат C2 — Kaplan International School (Великобритания)</li>
+
+      <li class="en">TESOL — University of Arizona</li>
+      <li class="ru" hidden>TESOL — University of Arizona</li>
+
+      <li class="en">C1 Certificate — EF (English First)</li>
+      <li class="ru" hidden>Сертификат C1 — EF (English First)</li>
+
+      <li class="en">English Olympiad Coach Diploma — RANEPA</li>
+      <li class="ru" hidden>Диплом тренера по английским олимпиадам — РАНХиГС</li>
+
+      <li class="en">6+ years of private teaching experience</li>
+      <li class="ru" hidden>Опыт преподавания — более 6 лет</li>
     </ul>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="card">
+    <h2 class="en">Student Results</h2>
+    <h2 class="ru" hidden>Результаты учеников</h2>
+
+    <ul class="benefits">
+      <li class="en">IELTS scores up to 7.5</li>
+      <li class="ru" hidden>IELTS — до 7.5</li>
+
+      <li class="en">Successful job interviews in corporate roles</li>
+      <li class="ru" hidden>Успешные собеседования</li>
+
+      <li class="en">ЕГЭ / ОГЭ results around 88–90 points</li>
+      <li class="ru" hidden>ЕГЭ / ОГЭ — результаты 88–90 баллов</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="card">
+    <h2 class="en">How Lessons Work</h2>
+    <h2 class="ru" hidden>Как проходят занятия</h2>
+
+    <ul class="benefits">
+      <li class="en">60-minute online lessons via Zoom</li>
+      <li class="ru" hidden>Онлайн-уроки по Zoom (60 минут)</li>
+
+      <li class="en">Personalized program tailored to your goals</li>
+      <li class="ru" hidden>Программа под ваши цели</li>
+
+      <li class="en">Homework optional</li>
+      <li class="ru" hidden>Домашние задания — по желанию</li>
+
+      <li class="en">All materials provided</li>
+      <li class="ru" hidden>Все материалы предоставляются</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="card price-card">
+    <h2 class="en">Pricing</h2>
+    <h2 class="ru" hidden>Стоимость</h2>
+
+    <div class="price">2000 RUB <span class="sub">per lesson</span></div>
+    <div class="usd-price">$23 USD</div>
+
+    <p class="lead en">Free 50–60 minute trial lesson</p>
+    <p class="lead ru" hidden>Бесплатный пробный урок 50–60 минут</p>
   </div>
 </section>
 
@@ -218,11 +175,17 @@
   <div class="wrap">
     <h2 class="en">Ready to start?</h2>
     <h2 class="ru" hidden>Готовы начать?</h2>
+
     <div class="contact-links">
-      <a href="https://t.me/uzmoz" class="btn secondary"><i class="fab fa-telegram"></i> Telegram</a>
-      <a href="mailto:nickolaishubin@gmail.com" class="btn secondary"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://t.me/uzmoz" class="btn secondary">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+      <a href="mailto:nickolaishubin@gmail.com" class="btn secondary">
+        <i class="fas fa-envelope"></i> Email
+      </a>
     </div>
-    <div class="copyright">© 2024 Nick Shubin</div>
+
+    <div class="copyright">© 2025 Nick Shubin</div>
   </div>
 </footer>
 
