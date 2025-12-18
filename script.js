@@ -1,5 +1,21 @@
 // ===============================
-// Expandable carousel logic
+// Language toggle (EN / RU)
+// ===============================
+function setLang(lang) {
+  localStorage.setItem('site_lang', lang);
+
+  document.querySelectorAll('.en, .ru').forEach(el => {
+    el.hidden = !el.classList.contains(lang);
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+// ===============================
+// Expandable gallery logic
+// (kept for future use, NOT removed)
 // ===============================
 function setupGalleryToggle(
   containerId,
@@ -20,36 +36,16 @@ function setupGalleryToggle(
     const top = container.getBoundingClientRect().top + window.scrollY;
 
     container.classList.toggle('expanded');
-    const isExpanded = container.classList.contains('expanded');
+    const expanded = container.classList.contains('expanded');
 
-    if (isExpanded) {
-      btnEn.textContent = enCollapseText;
-      btnRu.textContent = ruCollapseText;
-    } else {
-      btnEn.textContent = enExpandText;
-      btnRu.textContent = ruExpandText;
-    }
+    btnEn.textContent = expanded ? enCollapseText : enExpandText;
+    btnRu.textContent = expanded ? ruCollapseText : ruExpandText;
 
     window.scrollTo({ top, behavior: 'smooth' });
   }
 
   btnEn.addEventListener('click', toggle);
   btnRu.addEventListener('click', toggle);
-}
-
-// ===============================
-// Language logic (EN / RU)
-// ===============================
-function setLang(lang) {
-  localStorage.setItem('site_lang', lang);
-
-  document.querySelectorAll('.en, .ru').forEach(el => {
-    el.hidden = !el.classList.contains(lang);
-  });
-
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
 }
 
 // ===============================
@@ -65,18 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Diploma gallery
-  setupGalleryToggle(
-    'diploma-gallery',
-    'toggle-diploma-btn',
-    'toggle-diploma-btn-ru',
-    'View All Diplomas',
-    'Hide Diplomas',
-    'Показать все дипломы',
-    'Скрыть дипломы'
-  );
+  // Gallery hooks are intentionally kept
+  // Uncomment if galleries are re-enabled later
 
-  // Student results gallery
+  /*
   setupGalleryToggle(
     'achievement-gallery',
     'toggle-gallery-btn',
@@ -86,4 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
     'Показать все доказательства',
     'Свернуть'
   );
+
+  setupGalleryToggle(
+    'diploma-gallery',
+    'toggle-diploma-btn',
+    'toggle-diploma-btn-ru',
+    'View All Diplomas',
+    'Hide Diplomas',
+    'Показать все дипломы',
+    'Скрыть'
+  );
+  */
 });
