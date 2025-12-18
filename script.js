@@ -16,7 +16,7 @@ function setupGalleryToggle(containerId, enButtonId, ruButtonId, enExpandText, e
         } else {
             btnEn.textContent = enExpandText;
             btnRu.textContent = ruExpandText;
-            // Scroll back to the top of the section when collapsing
+            // Smoothly scroll back to view when collapsing
             container.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setupGalleryToggle(
         'achievement-gallery',
         'toggle-gallery-btn', 'toggle-gallery-btn-ru',
-        'View Student Proof', 'Hide Results', 
-        'Результаты учеников', 'Свернуть'
+        'View All Proof', 'Hide Results', 
+        'Показать доказательства', 'Свернуть'
     );
 
     // Education/Diploma Gallery
@@ -62,7 +62,6 @@ function setLang(lang) {
     document.querySelectorAll('.en, .ru').forEach(e => {
         if (e.classList.contains(lang)) {
             e.hidden = false;
-            // Handle display for non-block elements if needed, but 'hidden' attribute is SEO friendly
         } else {
             e.hidden = true;
         }
@@ -72,6 +71,6 @@ function setLang(lang) {
         b.classList.toggle('active', b.getAttribute('data-lang') === lang);
     });
 
-    // Update HTML lang attribute for accessibility
+    // Update HTML lang attribute for accessibility/SEO
     document.documentElement.lang = lang;
 }
