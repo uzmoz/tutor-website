@@ -191,3 +191,8 @@ textarea.form-control { resize: vertical; min-height: 100px; }
   .achievement-slide { flex: 0 0 85%; }
   .form-card { padding: 25px; }
 }
+
+/* Force hidden elements to stay hidden regardless of other styles */
+[hidden] {
+  display: none !important;
+}
