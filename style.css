@@ -215,6 +215,69 @@ textarea.form-control { resize: vertical; min-height: 100px; }
   .form-card { padding: 25px; }
 }
 
+/* Lesson Steps Carousel */
+.lesson-steps-section .lead { font-size: 17px; }
+
+.steps-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.steps-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-card {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 40px 30px;
+  position: relative;
+  opacity: 0.4;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.step-card.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.step-number {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, #0066cc, #9b51e0);
+  color: #fff; font-weight: 800; font-size: 16px;
+  border-radius: 50%; margin-bottom: 12px;
+}
+
+.step-icon {
+  font-size: 28px; color: var(--primary); margin-bottom: 14px;
+}
+
+.step-card h3 { font-size: 20px; margin: 0 0 10px; }
+.step-card p { font-size: 15px; color: var(--text-light); max-width: 480px; margin: 0 auto; line-height: 1.7; }
+
+.steps-nav {
+  display: flex; justify-content: center; gap: 10px; margin-top: 20px;
+}
+
+.step-dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid var(--primary); background: transparent;
+  cursor: pointer; padding: 0;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.step-dot.active {
+  background: var(--primary);
+  transform: scale(1.2);
+}
+.step-dot:hover { background: rgba(0,102,204,0.4); }
+
+@media (max-width: 768px) {
+  .step-card { padding: 30px 20px; }
+  .step-card h3 { font-size: 18px; }
+}
+
 /* Force hidden elements to stay hidden regardless of other styles */
 [hidden] {
   display: none !important;
