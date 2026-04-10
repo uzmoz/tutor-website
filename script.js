@@ -37,6 +37,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // === LESSON STEPS CAROUSEL ===
+    const stepsTrack = document.getElementById('steps-track');
+    const stepDots = document.querySelectorAll('.step-dot');
+    const stepCards = document.querySelectorAll('.step-card');
+    let currentStep = 0;
+    let stepAutoplay;
+
+    function goToStep(index) {
+        currentStep = index;
+        stepsTrack.style.transform = `translateX(-${index * 100}%)`;
+        stepCards.forEach(c => c.classList.remove('active'));
+        stepDots.forEach(d => d.classList.remove('active'));
+        stepCards[index].classList.add('active');
+        stepDots[index].classList.add('active');
+    }
+
+    stepDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            goToStep(Number(dot.dataset.step));
+            resetAutoplay();
+        });
+    });
+
+    function resetAutoplay() {
+        clearInterval(stepAutoplay);
+        stepAutoplay = setInterval(() => {
+            goToStep((currentStep + 1) % stepCards.length);
+        }, 5000);
+    }
+
+    if (stepsTrack && stepCards.length) {
+        resetAutoplay();
+        // Pause on hover
+        stepsTrack.addEventListener('mouseenter', () => clearInterval(stepAutoplay));
+        stepsTrack.addEventListener('mouseleave', resetAutoplay);
+        // Swipe support
+        let touchStartX = 0;
+        stepsTrack.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; clearInterval(stepAutoplay); }, { passive: true });
+        stepsTrack.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) {
+                goToStep(diff > 0 ? Math.min(currentStep + 1, stepCards.length - 1) : Math.max(currentStep - 1, 0));
+            }
+            resetAutoplay();
+        }, { passive: true });
+    }
+
     // === GALLERY EXPANSION SETUP ===
     
     // Student Results Gallery
