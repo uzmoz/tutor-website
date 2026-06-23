@@ -85,12 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // === GALLERY EXPANSION SETUP ===
-    
+
     // Student Results Gallery
     setupGalleryToggle(
         'achievement-gallery',
         'toggle-gallery-btn', 'toggle-gallery-btn-ru',
-        'View All Proof', 'Hide Results', 
+        'View All Proof', 'Hide Results',
         'Показать доказательства', 'Свернуть'
     );
 
@@ -101,6 +101,43 @@ document.addEventListener('DOMContentLoaded', () => {
         'View All Credentials', 'Hide Credentials',
         'Показать все дипломы', 'Скрыть дипломы'
     );
+
+    // === LIGHTBOX ===
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxBackdrop = lightbox.querySelector('.lightbox-backdrop');
+
+    function openLightbox(img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        const slide = img.closest('.achievement-slide');
+        const caption = slide
+            ? Array.from(slide.querySelectorAll('.achievement-caption')).find(p => !p.hidden)
+            : null;
+        lightboxCaption.textContent = caption ? caption.textContent : '';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.achievement-img').forEach(img => {
+        img.addEventListener('click', () => openLightbox(img));
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxBackdrop.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+            closeLightbox();
+        }
+    });
 });
 
 function setLang(lang) {
